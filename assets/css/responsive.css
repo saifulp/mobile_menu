@@ -1,0 +1,56 @@
+/* XL Device: 1200px. */
+@media (min-width: 1200px) and (max-width: 1500px){
+
+}
+
+/* LG Device: 992px. */
+@media (min-width: 992px) and (max-width: 1200px){
+
+.mt-main-menu::before {
+	width: 100%;
+}
+.single-service-tool {
+	margin-left: 45px;
+}
+.mt-service-area ul li i {
+	margin-left: 30px;
+}
+
+}
+
+/* MD Device: 768px. */
+@media (min-width: 768px) and (max-width: 991px){
+
+	.mt-mnu-section {
+  		padding: 20px 0;
+	}
+	.mt-service-area ul li p {
+	
+	}
+}
+
+
+/* Extra Small Device: 768px. */
+@media (max-width: 767px){
+
+
+/*footer menu*/
+.fd-second-menu {
+	margin-top: 30px;
+}
+.fd-twitter-post-area {
+	margin-top: 30px;
+}
+}
+
+/* Small Device: 550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px){
+	
+}
+
+/* Device width: 320px. */
+@media only screen and (min-width: 320px) and (max-width: 575px){
+}
+
+
+

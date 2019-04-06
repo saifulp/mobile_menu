@@ -1,0 +1,273 @@
+/*
+Theme Name: Responsive Pc Menu and Mobile Menu.
+Author: Md. Saiful Alam
+Support: saifulpro247@gmail.com.
+Description: Pc and Mobile Plugin.
+Version: 1.0
+*/
+
+
+/* Css index
+---------------------
+1. Theme Default Css
+2. Header Menu
+
+*/
+
+
+/*------------------ google fonts ----------------- */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:400,500,700');
+
+/*--------------------
+General Css
+----------------------*/
+*::-moz-selection {background:#eb1c74; color: #fff;}
+*::selection {background: #eb1c74; color: #fff;}
+
+.alignleft {float: left; margin-right: 15px;}
+.alignright {float: right;  margin-left: 15px;}
+.aligncenter {display: block; margin: 0 auto 15px;}
+
+a:focus { outline: 0 solid }
+img {max-width: 100%;  height: auto;}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {margin: 0; font-weight: 700;}
+html {line-height: 1.15; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -ms-overflow-style: scrollbar;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); overflow-x: hidden;} 
+
+body, html {height: 100%;}
+body {font-family: 'Open Sans', 'Poppins', sans-serif; font-size: 15px; font-weight: 400; text-align: left; text-justify: inter-character;}
+a:hover, a:focus {text-decoration: none;}
+
+p{margin: 0;}
+
+
+/*---------------------
+preloader css
+-----------------------*/
+#preloader {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.spinner {
+  margin: 100px auto;
+  width: 50px;
+  height: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.spinner > div {
+  background-color: #ff00f3;
+  height: 100%;
+  width: 6px;
+  display: inline-block;
+  
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% { 
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% { 
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+/*=============================
+Logo Area
+===============================*/
+.logo-area img {
+  max-width: 150px;
+  max-width: 150px;
+}
+/*=============================
+Main Menu Area
+===============================*/
+
+.mt-main-menu {
+  position: relative;
+}
+.mt-main-menu nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.mt-main-menu nav ul li {
+  display: inline-block;
+  position: relative;
+  margin-right: 30px;
+}
+.mt-main-menu nav ul li:last-child
+{margin-right: 0;}
+
+/*.mt-main-menu nav ul li a::before, .shrewd_menu > ul > li.current > a::before {
+  background: #16d428 none repeat scroll 0 0;
+  bottom: -29px;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: auto;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  width: 36px;
+}*/
+.mt-main-menu nav ul li:hover a{
+color: #16d428;
+transition: .5s;
+
+}
+
+
+.mt-main-menu nav ul li a {
+  display: block;
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #282e3e;
+  position: relative;
+  transition: .5s;
+  -webkit-transition: .5s;
+  padding: 30px 0;
+}
+
+/*submenu*/
+
+.mt-main-menu ul li ul.submenu { position: absolute; background: #282e3e; width: 220px; left: auto; top: 80px; border-top: 3px solid #16d428; opacity: 0; visibility: hidden; transition: .3s; z-index: 2;}
+.mt-main-menu nav ul li:hover ul.submenu {
+  opacity: 1;
+  visibility: visible;
+  top: 80px;
+}
+.mt-main-menu nav ul li ul.submenu li{ margin: 0; display: block; border-bottom: 2px solid #1e2128;}
+.mt-main-menu nav ul li ul.submenu li:last-child {border: none;}
+.mt-main-menu nav ul li ul.submenu li a{ color: #fff !important; padding: 15px 20px; font-size: 14px; width: 100%; font-family: 'Open Sans', sans-serif;}
+.mt-main-menu nav ul  li ul.submenu li:hover> a{ background: #11b120; padding-left:30px;}
+.mt-main-menu nav ul  li ul.submenu li ul.submenu{ left: 100%; top: 0; opacity: 0; visibility:  hidden;}
+.mt-main-menu nav ul  li ul.submenu li:hover ul.submenu{ opacity: 1; visibility: visible;}
+
+.menu-area {
+  padding: 20px 0;
+}
+/*mobile menu*/
+.responsive-menu.mean-container .mean-bar a.meanmenu-reveal {
+  border: 1px solid #16d428;
+  top: -46px;
+}
+.mean-container .mean-nav {
+  float: left;
+  width: 100%;
+  background: #0d1b10;
+  top: 20px;
+  position: relative;
+}
+.mean-container .mean-nav ul li a {
+  display: block;
+  float: left;
+  width: 90%;
+  padding: 1em 5%;
+  margin: 0;
+  text-align: left;
+  color: #fff;
+  /* border-top: 1px solid #383838; */
+  border-top: 1px solid rgba(255,255,255,0.5);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+.mean-container .mean-nav ul li a.mean-expand {
+  margin-top: 1px;
+  width: 26px;
+  height: 26px;
+  padding: 12px !important;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  z-index: 2;
+  font-weight: 700;
+  background: rgba(255,255,255,0.1);
+  border: none !important;
+  /* border-left: 1px solid rgba(255,255,255,0.4) !important; */
+  /* border-bottom: 1px solid rgba(255,255,255,0.2) !important; */
+  font-size: 14px !important;
+}
+
+
+
+
+/*========================
+Header Quote Btn Style
+==========================*/
+.quote-btn {
+  padding: 15px 15px;
+  border: 1px solid #16d428;
+}
+a.quote-btn {
+  font-size: 16px;
+  color: #16d428;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  transition: .3s;
+}
+.quote-btn:hover {
+  background-color: #16d428;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.get-quote {
+}
+
+.menu_fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+  left: 0;
+  top: 0;
+}
